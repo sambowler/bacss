@@ -1,18 +1,30 @@
 /* Eric Meyer reset */ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{border:0;outline:0;font-weight:inherit;font-style:inherit;font-size:100%;font-family:inherit;vertical-align:baseline;margin:0;padding:0;}:focus{outline:0;}body{line-height:1;color:#000;background:#FFF;}ol,ul{list-style:none;}table{border-collapse:separate;border-spacing:0;}caption,th,td{text-align:left;font-weight:400;}blockquote:before,blockquote:after,q:before,q:after{content:"";}
 
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section { 
+    display: block;
+}
+
+/* Some base styling taken from Paul Irish's HTML5 Boilerplate - http://github.com/paulirish/html5-boilerplate/blob/master/css/style.css */
+html { overflow-y: scroll; }
+
+table { font-size: inherit; font: 100%; }
+
+select, input, textarea, button { font: 99% sans-serif; }
+
+body, select, input, textarea { color: #444; }
+
 body {
 	width: 1080px;
 	margin: auto;
 	font: 14px/21px "Helvetica Neue", Helvetica, Arial, sans-serif;
 	background: #FFF;
 	padding-top: 2em;
-	color: #112D3A;
 }
 
 h1, h2, h3, h4, h5, h6 {
 	font-weight: bold;
 	color: #333;
-	text-shadow: 0 -1px 0 #FFF;
 	margin: 1em 0 0.5em;
 }
 
@@ -28,12 +40,68 @@ h5 { font-size: 1.25em; }
 
 h6 { font-size: 1.1em; }
 
-a:hover, a:focus {
-	background: #333;
+b, strong, th { font-weight: bold; }
+
+i, em { font-style: italic; }
+
+a:hover, a:active {
+	background: #000;
 	color: #FFF;
+	outline: none;
 }
 
+/*  j.mp/webkit-tap-highlight-color */
+a:link { -webkit-tap-highlight-color: #FF5E99; }
+
+small { font-size: 85%; }
+
+sub { vertical-align: sub; font-size: smaller; }
+
+sup { vertical-align: super; font-size: smaller; }
+
 p { margin-bottom: 0.8em; color: #444; }
+
+.error, .success { font-weight: bold; }
+
+.error { color: #F00; }
+
+.success { color: green; }
+
+pre, code, kbd, samp { font: 12px "Monaco", "Inconsolata", "Courier New", Courier, monospace; }
+
+pre { 
+  padding: 15px; 
+  
+  /* www.pathf.com/blogs/2008/05/formatting-quoted-code-in-blog-posts-css21-white-space-pre-wrap/ */
+  white-space: pre; /* CSS2 */
+  white-space: pre-wrap; /* CSS 2.1 */
+  white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
+  word-wrap: break-word; /* IE */
+}
+
+/* align checkboxes, radios, text inputs with their label
+   by: Thierry Koblentz tjkdesign.com/ez-css/css/base.css  */
+input[type="radio"] { vertical-align: text-bottom; }
+input[type="checkbox"] { vertical-align: bottom; }
+
+label, input[type=button], input[type=submit], button { cursor: pointer; }
+
+input:invalid { 
+	border-radius: 1px;
+	-moz-box-shadow: 0px 0px 5px red; 
+	-webkit-box-shadow: 0px 0px 5px red; 
+	box-shadow: 0px 0px 5px red;
+}
+
+ul {
+	list-style-type: disc;
+	margin: 0 0 0.8em 2.5em;
+}
+
+ol {
+	list-style-type: decimal;
+	margin: 0 0 0.8em 2.5em;
+}
 
 blockquote {
 	font-style: italic;
@@ -44,46 +112,60 @@ blockquote {
 
 blockquote p { margin-bottom: 0; }
 
-code { 
-	background: #DAD8C3;
-	margin: 0 -0.1em;
-	padding: 0 0.1em;
+code, kbd, samp { 
+	background: rgba(0, 0, 0, 0.15);
 }
+
+dl {
+	padding: 10px 0 10px 10px;
+	background: #F4F5F1;
+}
+
+dt { font-weight: bold; }
+
+dd {
+	margin-bottom: 1em;
+	font-size: 13px;
+}
+
+
+
+body > * { margin: 0 0.625%; }
 
 body > div {
-	margin: 0 0.625%;
 	float: left;
 	display: block;
-	-webkit-
 }
 
-header {
-	width: 98.75%;
-	margin: 0 10px;
-}
+header { margin-bottom: 1.5em; }
 
-nav, header ul {
+header ul {
 	list-style-type: none;
 	padding: 0;
+	margin: 0;
+	overflow: hidden;
 }
 
-nav li, header ul li {
+header ul li {
 	float: left;
 }
 
 nav li a, header ul li a {
 	display: block;
-	padding: 0.25em 0.5em;
+	margin-right: 0.5em;
 }
 
 body > section, body > article { /* Primary Content */
 	width: 67.5%;
+	float: left;
 }
 
 body > aside { /* Sidebar */
 	width: 30%;
+	float: left;
 }
 
 footer { /* Footer */
+	clear: both;
 	width: 98.75%;
 }
