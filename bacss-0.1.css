@@ -6,7 +6,7 @@ footer, header, hgroup, menu, nav, section {
 }
 
 /* Some base styling taken from Paul Irish's HTML5 Boilerplate - http://github.com/paulirish/html5-boilerplate/blob/master/css/style.css */
-html { overflow-y: scroll; }
+html { overflow-y: scroll; -webkit-font-smoothing: anti-aliased; }
 
 table { font-size: inherit; font: 100%; }
 
@@ -16,7 +16,7 @@ body, select, input, textarea { color: #444; }
 
 body {
 	width: 1080px;
-	margin: auto;
+	margin: 0 auto 40px;
 	font: 14px/21px "Helvetica Neue", Helvetica, Arial, sans-serif;
 	background: #FFF;
 	padding-top: 2em;
@@ -61,11 +61,11 @@ sup { vertical-align: super; font-size: smaller; }
 
 p { margin-bottom: 0.8em; color: #444; }
 
-.error, .success { font-weight: bold; }
+.error, .success { padding: 0.5em; font-weight: bold; }
 
-.error { color: #F00; }
+.error { background: #FFEEEE; border: 1px solid #F00; }
 
-.success { color: green; }
+.success { background: #EEFFEE; border: 1px solid #0F0; }
 
 pre, code, kbd, samp { font: 12px "Monaco", "Inconsolata", "Courier New", Courier, monospace; }
 
@@ -106,7 +106,7 @@ ol {
 blockquote {
 	font-style: italic;
 	margin: 0.8em 0;
-	padding: 10px 0 10px 10px;
+	padding: 10px;
 	background: #F4F5F1;
 }
 
@@ -117,7 +117,7 @@ code, kbd, samp {
 }
 
 dl {
-	padding: 10px 0 10px 10px;
+	padding: 10px;
 	background: #F4F5F1;
 }
 
@@ -128,7 +128,55 @@ dd {
 	font-size: 13px;
 }
 
+form {
+	padding: 10px;
+	background: #F4F5F1;
+}
 
+fieldset {
+	padding: 1em;
+	border: 1px solid #b6bca2;
+	margin-bottom: 0.8em;
+}
+
+legend { padding: 0 0.5em; }
+
+input[type="text"], textarea {
+	border: 1px solid #909090;
+	padding: 0.5em;
+}
+
+textarea {
+	resize: x;
+	-moz-resize: x;
+}
+
+table {
+	 border-collapse: collapse;
+	 border-spacing: 0;
+	 margin: 0 0 1.5em;
+	 padding: 0;
+}
+
+caption {
+	 font-style: italic;
+	 text-align: left;
+}
+
+tr.alt td {
+  background: #eee;
+}
+
+td {
+	 border: 1px solid #909090;
+	 padding: 0.333em;
+	 vertical-align: middle;
+}
+th{
+	 font-weight: 700;
+	 padding: 0.333em;
+	 vertical-align: middle;
+}
 
 body > * { margin: 0 0.625%; }
 
@@ -165,7 +213,7 @@ body > aside { /* Sidebar */
 	float: left;
 }
 
-footer { /* Footer */
+footer {
 	clear: both;
 	width: 98.75%;
 }
