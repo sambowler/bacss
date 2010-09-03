@@ -1,6 +1,8 @@
 BaCSS
 =========
 
+<strong>This is an ongoing project so I wouldn't rely on anything working quite yet. Keep an eye on the [site](http://bacss.sambowler.com) for the full release.</strong>
+
 BaCSS is a stylesheet that is just that, a base set of styling for anything you're building. It will add basic styling, spacing and layout to every possible element you could imagine.
 
 How To Use It
