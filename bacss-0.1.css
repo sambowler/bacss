@@ -99,18 +99,17 @@ p { margin-bottom: 0.8em; color: #444; }
 
 .success { background: #EEFFEE; border: 1px solid #8FC98F; }
 
+cite { font-weight: normal; color: #666; font-style: normal; font-size: 13px; }
+
 pre, code, kbd, samp, tt { font: 12px "Monaco", "Inconsolata", "Courier New", Courier, monospace; }
 
 pre { 
 	padding: 15px; 	
 	background: #F4F5F1;
 	border: 1px solid #E4E7DD;
-
-	/* www.pathf.com/blogs/2008/05/formatting-quoted-code-in-blog-posts-css21-white-space-pre-wrap/ */
-	white-space: pre; /* CSS2 */
-	white-space: pre-wrap; /* CSS 2.1 */
-	white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
-	word-wrap: break-word; /* IE */
+	margin-bottom: 0.8em;
+	white-space: pre;
+	word-wrap: break-word;
 }
 
 /* align checkboxes, radios, text inputs with their label
@@ -218,9 +217,8 @@ th {
 }
 
 /* Wildcard's are hardly the most efficient way of doing things but we don't really have much choice */
-body > * { margin: 0 0.625%; }
-
-body > div {
+body > * { 
+	margin: 0 0.625%;
 	float: left;
 	display: block;
 }
@@ -230,6 +228,7 @@ header, #header {
 	padding: 2em 1em 0;
 	background: #0B0A0E; 
 	color: #FFF;
+	width: 100%;
 }
 
 header * { color: #FFF !important; }

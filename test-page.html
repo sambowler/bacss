@@ -7,7 +7,7 @@
 </head>
 <body>
     <header>
-        <h1>BaCSS Test Page</h1>
+        <h1><a href="test-page.html">BaCSS Test Page</a></h1>
         <nav>
             <ul>
                 <li><a href="#">Test</a></li>
@@ -19,19 +19,28 @@
     </header>
     
     <div id="main">
-        <p>BaCSS is a stylesheet that you can plug in to any site that is under construction. It will add basic styling, spacing and layout to every possible element you could imagine.</p>
-        <p>There are two ways of using BaCSS.</p>
-        <h2>The traditional method</h2>
-        <p>If you're using traditional ID's for your layout such as <code>#header</code>, <code>#main</code>, <code>#sidebar</code>, <code>#footer</code> or you're using HTML5's new semantic elements, this is probably the solution for you. SImply include the stylesheet as you would any other.
-            <pre>
-                &lt;link rel=&quot;stylesheet&quot; href=&quot;bacss-0.1.css&quot; media=&quot;screen&quot; type=&quot;text/css&quot;&gt;
-            </pre>
-        </p>
-        <h2>The other method</h2>
-        <p>You can also customise BaCSS to use any custom ID's you would like. You can do this by either simply editing the stylesheet or using the JavaScript solution.</p>
-        <h3>The JavaScript solution</h3>
-        
+        <h2>Huh, what?!</h2>
+        <p>BaCSS is a stylesheet that is just that, a base set of styling for anything you're building. It will add basic styling, spacing and layout to every possible element you could imagine.</p>
+        <h3>How To Use It</h3>
+        <p>If you're using traditional ID's for your layout such as <code>#header</code>, <code>#main</code>, <code>#sidebar</code>, <code>#footer</code> or you're using HTML5's new semantic elements, this is probably the solution for you. SImply include the stylesheet as you would any other.</p>
+        <pre>&lt;link rel=&quot;stylesheet&quot; href=&quot;bacss-0.1.css&quot; media=&quot;screen&quot; type=&quot;text/css&quot;&gt;</pre>
+        <p>No need for <code>type="text/css"</code> in HTML5, of course.</p>
+        <h3>If you're using crazy ID's...</h3>
+        <p>There's the JavaScript solution:</p>
+        <pre>&lt;script type=&quot;text/javascript&quot; src=&quot;bacss-0.1.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+    new Bacss({
+        '#header', '#new-header-id',
+        '#footer', '#new-footer-id',
+    });
+&lt;/script&gt;</pre>
+        <p>Simply pass the object a set of options that you would like to be replaced in the CSS. You could, of course, just adjust the CSS to your needs but this may be easier for some users.</p>
     </div><!-- end #main -->
+    
+    <aside id="sidebar">
+        <h3>Hi from the sidebar!</h3>
+        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+    </aside><!-- end #sidebar -->
     
     <footer>
         
