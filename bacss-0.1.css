@@ -1,11 +1,40 @@
-/* Eric Meyer reset */ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{border:0;outline:0;font-weight:inherit;font-style:inherit;font-size:100%;font-family:inherit;vertical-align:baseline;margin:0;padding:0;}:focus{outline:0;}body{line-height:1;color:#000;background:#FFF;}ol,ul{list-style:none;}table{border-collapse:separate;border-spacing:0;}caption,th,td{text-align:left;font-weight:400;}blockquote:before,blockquote:after,q:before,q:after{content:"";}
+/*
+
+html5doctor.com Reset Stylesheet (Eric Meyer's Reset Reloaded + HTML5 baseline)
+v1.4 2009-07-27 | Authors: Eric Meyer & Richard Clark
+html5doctor.com/html-5-reset-stylesheet/
+
+Some base styling from Paul Irish's HTML5 Boilerplate: http://github.com/paulirish/html5-boilerplate/blob/master/css/style.css
+Table styling from SenCSS: http://sencss.kilianvalkhof.com/
+
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+}
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section { 
     display: block;
 }
 
-/* Some base styling taken from Paul Irish's HTML5 Boilerplate - http://github.com/paulirish/html5-boilerplate/blob/master/css/style.css */
 html { overflow-y: scroll; -webkit-font-smoothing: anti-aliased; }
 
 table { font-size: inherit; font: 100%; }
@@ -17,20 +46,20 @@ body, select, input, textarea { color: #444; }
 body {
 	width: 1080px;
 	margin: 0 auto 40px;
-	font: 14px/21px "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font: 15px/24px Cambria, Georgia, "Times New Roman", Times, serif;;
 	background: #FFF;
-	padding-top: 2em;
 }
 
 h1, h2, h3, h4, h5, h6 {
 	font-weight: bold;
 	color: #333;
 	margin: 1em 0 0.5em;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 h1 { font-size: 2em; }
 
-h2 { font-size: 1.75em; }
+#main h1, #primary-content h1, body > section h1, body > article h1, h2 { font-size: 1.75em; }
 
 h3 { font-size: 1.6em; }
 
@@ -43,6 +72,8 @@ h6 { font-size: 1.1em; }
 b, strong, th { font-weight: bold; }
 
 i, em { font-style: italic; }
+
+a { color: #000; }
 
 a:hover, a:active {
 	background: #000;
@@ -61,13 +92,13 @@ sup { vertical-align: super; font-size: smaller; }
 
 p { margin-bottom: 0.8em; color: #444; }
 
-.error, .success { padding: 0.5em; font-weight: bold; }
+.error, .success { padding: 0.25em 0.5em; font-weight: bold; }
 
-.error { background: #FFEEEE; border: 1px solid #F00; }
+.error { background: #FFEEEE; border: 1px solid #C98F8F; }
 
-.success { background: #EEFFEE; border: 1px solid #0F0; }
+.success { background: #EEFFEE; border: 1px solid #8FC98F; }
 
-pre, code, kbd, samp { font: 12px "Monaco", "Inconsolata", "Courier New", Courier, monospace; }
+pre, code, kbd, samp, tt { font: 12px "Monaco", "Inconsolata", "Courier New", Courier, monospace; }
 
 pre { 
   padding: 15px; 
@@ -112,7 +143,7 @@ blockquote {
 
 blockquote p { margin-bottom: 0; }
 
-code, kbd, samp { 
+code, kbd, samp, tt { 
 	background: rgba(0, 0, 0, 0.15);
 }
 
@@ -127,6 +158,8 @@ dd {
 	margin-bottom: 1em;
 	font-size: 13px;
 }
+
+abbr { cursor: help; border-bottom: 1px dotted #999; }
 
 form {
 	padding: 10px;
@@ -172,7 +205,8 @@ td {
 	 padding: 0.333em;
 	 vertical-align: middle;
 }
-th{
+
+th {
 	 font-weight: 700;
 	 padding: 0.333em;
 	 vertical-align: middle;
@@ -185,35 +219,39 @@ body > div {
 	display: block;
 }
 
-header { margin-bottom: 1.5em; }
+header, #header { 
+	margin: 0 -0.125em 1.5em; 
+	padding: 2em 0.5em 0.5em;
+	background: #F4F5F1; 
+}
 
-header ul {
+header ul, #header ul {
 	list-style-type: none;
 	padding: 0;
 	margin: 0;
 	overflow: hidden;
 }
 
-header ul li {
+header ul li, #header ul li {
 	float: left;
 }
 
-nav li a, header ul li a {
+nav li a, header li a, #header li a {
 	display: block;
 	margin-right: 0.5em;
 }
 
-body > section, body > article { /* Primary Content */
+body > section, body > article, #main, #primary-content { /* Primary Content */
 	width: 67.5%;
 	float: left;
 }
 
-body > aside { /* Sidebar */
+body > aside, #sidebar, #secondary-content { /* Sidebar */
 	width: 30%;
 	float: left;
 }
 
-footer {
+footer, #footer {
 	clear: both;
 	width: 98.75%;
 }
