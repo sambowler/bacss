@@ -1,14 +1,19 @@
 /*
-
+ 
+-------------------
+===================
+BaCSS v0.1
+===================
+-------------------
+ 
 html5doctor.com Reset Stylesheet (Eric Meyer's Reset Reloaded + HTML5 baseline)
 v1.4 2009-07-27 | Authors: Eric Meyer & Richard Clark
 html5doctor.com/html-5-reset-stylesheet/
-
+ 
 Some base styling from Paul Irish's HTML5 Boilerplate: http://github.com/paulirish/html5-boilerplate/blob/master/css/style.css
 Table styling from SenCSS: http://sencss.kilianvalkhof.com/
-
+ 
 */
-
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code,
@@ -21,254 +26,329 @@ table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section, summary,
 time, mark, audio, video {
-  margin:0;
-  padding:0;
-  border:0;
-  outline:0;
-  font-size:100%;
-  vertical-align:baseline;
-  background:transparent;
+	background: transparent;
+	border: 0;
+	font-size: 100%;
+	margin: 0;
+	outline: 0;
+	padding: 0;
+	vertical-align: baseline; 
 }
 
+/* Base Elements */
+ 
 article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section { 
-    display: block;
+footer, header, hgroup, menu, nav, section { display: block; }
+ 
+html {
+	-webkit-font-smoothing: anti-aliased;
+	overflow-y: scroll; 
 }
-
-html { overflow-y: scroll; -webkit-font-smoothing: anti-aliased; }
-
-table { font-size: inherit; font: 100%; }
-
-select, input, textarea, button { font: 99% sans-serif; }
-
+ 
+table {
+	font-size: inherit;
+	font: 100%; 
+}
+ 
 body, select, input, textarea { color: #444; }
-
+ 
 body {
-	width: 1080px;
-	margin: 0 auto 40px;
-	font: 15px/24px Cambria, Georgia, "Times New Roman", Times, serif;;
 	background: #FFF;
+	font: 15px/24px Cambria, Georgia, "Times New Roman", Times, serif;
+	margin: 0 auto 40px;
+	width: 1080px; 
 }
 
+/* Block elements */
 h1, h2, h3, h4, h5, h6 {
-	font-weight: bold;
 	color: #333;
-	margin: 1em 0 0.5em;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	margin: 1em 0 0.5em; 
 }
-
+ 
 h1 { font-size: 2em; }
-
+ 
 #main h1, #primary-content h1, body > section h1, body > article h1, h2 { font-size: 1.75em; }
-
+ 
 h3 { font-size: 1.6em; }
-
+ 
 h4 { font-size: 1.4em; }
-
+ 
 h5 { font-size: 1.25em; }
-
+ 
 h6 { font-size: 1.1em; }
 
-b, strong, th { font-weight: bold; }
-
-i, em { font-style: italic; }
-
-a { color: #000; text-decoration: none; }
-
-a:hover, a:active {
-	background: #000;
-	color: #FFF;
-	outline: none;
-	text-decoration: underline;
+p {
+	color: #444;
+	margin-bottom: 0.8em; 
 }
 
-/*  j.mp/webkit-tap-highlight-color */
-a:link { -webkit-tap-highlight-color: #FF5E99; }
-
-small { font-size: 85%; }
-
-sub { vertical-align: sub; font-size: smaller; }
-
-sup { vertical-align: super; font-size: smaller; }
-
-p { margin-bottom: 0.8em; color: #444; }
-
-.error, .success { padding: 0.25em 0.5em; font-weight: bold; }
-
-.error { background: #FFEEEE; border: 1px solid #C98F8F; }
-
-.success { background: #EEFFEE; border: 1px solid #8FC98F; }
-
-cite { font-weight: normal; color: #666; font-style: normal; font-size: 13px; }
-
-pre, code, kbd, samp, tt { font: 12px "Monaco", "Inconsolata", "Courier New", Courier, monospace; }
-
-pre { 
-	padding: 15px; 	
+pre {
 	background: #F4F5F1;
 	border: 1px solid #E4E7DD;
 	margin-bottom: 0.8em;
+	padding: 15px;
 	white-space: pre;
-	word-wrap: break-word;
-}
-
-/* align checkboxes, radios, text inputs with their label
-   by: Thierry Koblentz tjkdesign.com/ez-css/css/base.css  */
-input[type="radio"] { vertical-align: text-bottom; }
-input[type="checkbox"] { vertical-align: bottom; }
-
-label, input[type=button], input[type=submit], button { cursor: pointer; }
-
-input:invalid { 
-	border-radius: 1px;
-	-moz-box-shadow: 0px 0px 5px red; 
-	-webkit-box-shadow: 0px 0px 5px red; 
-	box-shadow: 0px 0px 5px red;
+	word-wrap: break-word; 
 }
 
 ul {
 	list-style-type: disc;
-	margin: 0 0 0.8em 2.5em;
+	margin: 0 0 0.8em 2.5em; 
 }
-
+ 
 ol {
 	list-style-type: decimal;
-	margin: 0 0 0.8em 2.5em;
+	margin: 0 0 0.8em 2.5em; 
 }
-
+ 
 blockquote {
+	background: #F4F5F1;
+	border: 1px solid #E4E7DD;
 	font-style: italic;
 	margin: 0.8em 0;
-	padding: 10px;
-	background: #F4F5F1;
-	border: 1px solid #E4E7DD;
+	padding: 10px; 
 }
-
-blockquote p { margin-bottom: 0; }
-
-code, kbd, samp, tt { 
-	background: rgba(0, 0, 0, 0.15);
-}
-
+ 
+	blockquote p { margin-bottom: 0; }
+	
 dl {
-	padding: 10px;
 	background: #F4F5F1;
+	padding: 10px; 
 }
 
-dt { font-weight: bold; }
+/* http://forrst.com/posts/Gradient_Horizontal_Rules-yZ4 */
+hr {
+	background: #DDD;
+	background: -moz-linear-gradient(left center, rgb(255,255,255) 0%, rgb(187, 187, 187) 25%, rgb(187, 187, 187) 75%, rgb(255,255,255) 100%);
+	background: -webkit-gradient(linear, left top, right top, color-stop(0, rgb(255,255,255)), color-stop(0.25, rgb(187, 187, 187)), color-stop(0.75, rgb(187, 187, 187)), color-stop(1, rgb(255,255,255)));
+	border: 0;
+	height: 1px; 
+}
 
-dd {
-	margin-bottom: 1em;
+/* Inline elements */
+b, strong, th { font-weight: bold; }
+ 
+i, em { font-style: italic; }
+ 
+a { color: #000; }
+ 
+	a:hover, a:active {
+		background: #000;
+		color: #FFF;
+		outline: none;
+		text-decoration: none; 
+	}
+ 
+	/*  j.mp/webkit-tap-highlight-color */
+	a:link { -webkit-tap-highlight-color: #FF5E99; }
+ 
+small { font-size: 85%; }
+ 
+sub {
+	font-size: smaller;
+	vertical-align: sub; 
+}
+ 
+sup {
+	font-size: smaller;
+	vertical-align: super; 
+}
+ 
+cite {
+	color: #666;
 	font-size: 13px;
+	font-style: normal;
+	font-weight: normal; 
+}
+ 
+pre, code, kbd, samp, tt, var { font: 12px "Monaco", "Inconsolata", "Courier New", Courier, monospace; }
+ 
+code, kbd, samp, tt, var { background: rgba(0, 0, 0, 0.15); }
+ 
+dt { font-weight: bold; }
+ 
+dd {
+	font-size: 13px;
+	margin-bottom: 1em; 
+}
+ 
+abbr, acronym {
+	border-bottom: 1px dotted #999;
+	cursor: help; 
 }
 
-abbr { cursor: help; border-bottom: 1px dotted #999; }
-
+/* Forms */
 form {
-	padding: 10px;
 	background: #F4F5F1;
 	border: 1px solid #E4E7DD;
+	padding: 10px; 
 }
-
+ 
 fieldset {
-	padding: 1em;
-	border: 1px solid #b6bca2;
+	border: 1px solid #b1b4a9;
 	margin-bottom: 0.8em;
+	padding: 1em; 
+}
+ 
+legend {
+	font-weight: bold;
+	margin-left: -0.5em;
+	padding: 0 0.5em; 
 }
 
-legend { padding: 0 0.5em; }
-
+select, input, textarea, button { font: 99% sans-serif; }
+ 
 input[type="text"], textarea {
-	border: 1px solid #909090;
-	padding: 0.5em;
+	border: 1px solid #b1b4a9;
+	padding: 0.5em; 
 }
-
+ 
+select[size], textarea, input[type="radio"] { vertical-align: middle; }
+ 
+input[type="checkbox"] { vertical-align: bottom; }
+ 
 textarea {
-	resize: x;
-	-moz-resize: x;
+	-moz-resize: x; /* FF4 */
+	resize: x; 
 }
+ 
+label, input[type=button], input[type=submit], button { cursor: pointer; }
+ 
+input:invalid {
+	-moz-box-shadow: 0px 0px 5px red;
+	-webkit-box-shadow: 0px 0px 5px red;
+	border-radius: 1px;
+	box-shadow: 0px 0px 5px red; }
 
+/* Tables */
 table {
-	 border-collapse: collapse;
-	 border-spacing: 0;
-	 margin: 0 0 1.5em;
-	 padding: 0;
+	border-collapse: collapse;
+	border-spacing: 0;
+	margin: 0 0 1.5em;
+	padding: 0; 
 }
-
+ 
 caption {
-	 font-style: italic;
-	 text-align: left;
+	font-style: italic;
+	text-align: left; 
 }
-
-tr.alt td {
-  background: #eee;
-}
-
+ 
+tr.alt td { background: #eee; }
+ 
 td {
-	 border: 1px solid #909090;
-	 padding: 0.333em;
-	 vertical-align: middle;
+	border: 1px solid #909090;
+	padding: 0.333em;
+	vertical-align: middle; 
 }
-
+ 
 th {
-	 font-weight: 700;
-	 padding: 0.333em;
-	 vertical-align: middle;
+	font-weight: 700;
+	padding: 0.333em;
+	vertical-align: middle; 
 }
 
-/* Wildcard's are hardly the most efficient way of doing things but we don't really have much choice */
-body > * { 
-	margin: 0 0.625%;
-	float: left;
+/* Layout - wildcard's are hardly the most efficient way of doing things but we don't really have much choice */
+body > * {
 	display: block;
+	float: left;
+	margin: 0 0.625%; 
 }
-
-header, #header { 
-	margin: 0 -0.625em 1.5em; 
-	padding: 2em 1em 0;
-	background: #0B0A0E; 
+ 
+header, #header {
+	background: #0B0A0E;
 	color: #FFF;
-	width: 100%;
+	margin: 0 -0.625em 1.5em;
+	padding: 2em 1em 0;
+	width: 100%; 
 }
-
-header * { color: #FFF !important; }
-
-header ul, #header ul {
+ 
+header *, #header * { color: #FFF !important; }
+ 
+header ul, #header ul, footer ul, #footer ul {
 	list-style-type: none;
-	padding: 0;
 	margin: 0;
 	overflow: hidden;
+	padding: 0; 
 }
-
-header ul li, #header ul li {
-	float: left;
-}
-
+ 
+header ul li, #header ul li, footer ul li, #footer ul li { float: left; }
+ 
 nav li a, header li a, #header li a {
+	background: #333;
 	color: #FFF;
 	display: block;
 	margin-right: 1px;
 	padding: 0.25em 1.5em 0.3em;
-	background: #333;
+	text-decoration: none; 
 }
-
+ 
 nav li a:hover, header li a:hover, #header li a:hover { background: #444; }
-
+ 
 body > section, body > article, #main, #primary-content {
-	width: 67.5%;
 	float: left;
+	width: 67.5%; 
 }
-
+ 
 body > section *:first-child, body > article *:first-child, #main *:first-child, #primary-content *:first-child { margin-top: 0 !important; }
-
-body > aside, #sidebar, #secondary-content {
-	width: 30%;
+ 
+body > section img, body > article img, #main img, #primary-content img {
+	border: 5px solid #EEE;
 	float: left;
+	margin: 0 1em 1em 0;
 }
-
+ 
+body > aside, #sidebar, #secondary-content {
+	float: left;
+	width: 30%; 
+}
+ 
 body > aside *:first-child, #sidebar *:first-child, #secondary-content *:first-child { margin-top: 0 !important; }
-
+ 
 footer, #footer {
+	background: #0B0A0E;
 	clear: both;
-	width: 98.75%;
+	color: #FFF;
+	margin: 1.5em -0.625em 0;
+	padding: 0 1em 1em;
+	width: 100%;
+	width: 98.75%; 
+}
+ 
+footer *, #footer * { color: #FFF !important; }
+ 
+footer ul, #footer ul { margin-bottom: 0.8em; }
+ 
+/* Default Classes */
+.error, .success {
+	font-weight: bold;
+	padding: 0.25em 0.5em; 
+}
+ 
+.error {
+	background: #FFEEEE;
+	border: 1px solid #C98F8F; 
+	color: #543434;
+}
+ 
+.success {
+	background: #EEFFEE;
+	border: 1px solid #8FC98F;
+	color: #1C301C; 
+}
+ 
+.left { float: left !important; }
+ 
+img.left { margin: 0 1em 1em 0; }
+ 
+.right { float: right !important; }
+ 
+img.right { margin: 0 0 1em 1em !important; }
+ 
+.clear { clear: both; }
+ 
+.clearfix {
+	overflow: hidden;
+	zoom: 1; 
 }
