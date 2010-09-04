@@ -30,3 +30,9 @@ There's the JavaScript solution:
 (again, no need for <code>type="text/javascript"</code> in HTML5)
     
 Simply pass the object a set of options that you would like to be replaced in the CSS. You could, of course, just adjust the CSS to your needs but this may be easier for some users.
+
+Todo
+-----------
+
+- Different layouts (2 column, 3 columns etc.)
+- Responsive
