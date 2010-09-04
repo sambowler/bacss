@@ -267,6 +267,8 @@ body > section, body > article, #main, #primary-content {
 
 body > section *:first-child, body > article *:first-child, #main *:first-child, #primary-content *:first-child { margin-top: 0 !important; }
 
+body > section img, body > article img, #main img, #primary-content img { float: left; margin: 0 1em 1em 0; border: 5px solid #EEE; }
+
 body > aside, #sidebar, #secondary-content {
 	width: 30%;
 	float: left;
@@ -295,9 +297,13 @@ footer ul, #footer ul { margin-bottom: 0.8em; }
 
 .success { background: #EEFFEE; border: 1px solid #8FC98F; }
 
-.left { float: left; }
+.left { float: left !important; }
 
-.right { float: right; }
+img.left { margin: 0 1em 1em 0; }
+
+.right { float: right !important; }
+
+img.right { margin: 0 0 1em 1em !important; }
 
 .clear { clear: both; }
 
