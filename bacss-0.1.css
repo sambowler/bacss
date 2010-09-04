@@ -174,14 +174,18 @@ form {
 
 fieldset {
 	padding: 1em;
-	border: 1px solid #b6bca2;
+	border: 1px solid #b1b4a9;
 	margin-bottom: 0.8em;
 }
 
-legend { padding: 0 0.5em; }
+legend {
+	padding: 0 0.5em;
+	margin-left: -0.5em;
+	font-weight: bold;
+}
 
 input[type="text"], textarea {
-	border: 1px solid #909090;
+	border: 1px solid #b1b4a9;
 	padding: 0.5em;
 }
 
