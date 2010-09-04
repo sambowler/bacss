@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <title>BaCSS Test Page</title>
     <link rel="stylesheet" href="bacss-0.1.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script>
+        $(function() {
+            $('#how-to-use-it').hide();
+            $('#show-test-content').click(function() { $('#test-content').slideToggle(); return false; });
+            $('#show-how-to-use-it').click(function() { $('#how-to-use-it').slideToggle(); return false; });
+        });
+    </script>
 </head>
 <body>
     <header>
@@ -20,30 +28,95 @@
     
     <div id="main">
         <h2>Huh, what?!</h2>
-        <p>BaCSS is a stylesheet that is just that, a base set of styling for anything you're building. It will add basic styling, spacing and layout to every possible element you could imagine.</p>
-        <h3>How To Use It</h3>
-        <p>If you're using traditional ID's for your layout such as <code>#header</code>, <code>#main</code>, <code>#sidebar</code>, <code>#footer</code> or you're using HTML5's new semantic elements, this is probably the solution for you. SImply include the stylesheet as you would any other.</p>
-        <pre>&lt;link rel=&quot;stylesheet&quot; href=&quot;bacss-0.1.css&quot; media=&quot;screen&quot; type=&quot;text/css&quot;&gt;</pre>
-        <p>No need for <code>type="text/css"</code> in HTML5, of course.</p>
-        <h3>If you're using crazy ID's...</h3>
-        <p>There's the JavaScript solution:</p>
-        <pre>&lt;script type=&quot;text/javascript&quot; src=&quot;bacss-0.1.js&quot;&gt;&lt;/script&gt;
+            <p>BaCSS is a stylesheet that is just that, a base set of styling for anything you&rsquo;re building. It will add basic styling, spacing and layout to every possible element you could imagine.</p>
+        <h2><a id="show-how-to-use-it" href="#how-to-use-it">How To Use It &rarr;</a></h2>
+        <div id="how-to-use-it">
+            <h3>If you're normal</h3>
+            <p>If you&rsquo;re using traditional ID's for your layout such as <code>#header</code>, <code>#main</code>, <code>#sidebar</code>, <code>#footer</code> or you're using HTML5's new semantic elements, this is probably the solution for you. SImply include the stylesheet as you would any other.</p>
+            <pre>&lt;link rel=&quot;stylesheet&quot; href=&quot;bacss-0.1.css&quot; media=&quot;screen&quot; type=&quot;text/css&quot;&gt;</pre>
+            <p>No need for <code>type="text/css"</code> in HTML5, of course.</p>
+            
+            <h3>If You're Using Crazy ID's</h3>
+            <p>There's the JavaScript solution:</p>
+            <pre>&lt;script type=&quot;text/javascript&quot; src=&quot;bacss-0.1.js&quot;&gt;&lt;/script&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
-    new Bacss({
-        '#header', '#new-header-id',
-        '#footer', '#new-footer-id',
-    });
+new Bacss({
+    '#header', '#new-header-id',
+    '#footer', '#new-footer-id',
+});
 &lt;/script&gt;</pre>
-        <p>Simply pass the object a set of options that you would like to be replaced in the CSS. You could, of course, just adjust the CSS to your needs but this may be easier for some users.</p>
+            <p>Simply pass the object a set of options that you would like to be replaced in the CSS. You could, of course, just adjust the CSS to your needs but this may be easier for some users.</p>
+        </div><!-- end #how-to-use-it -->
+        
+        <h2><a id="show-test-content" href="#test-content">Take A Look At It In Action &rarr;</a></h2>
+        <section id="test-content">
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+            <h1>Inline elements (this is a h1)</h1>
+            <p>Pellentesque <abbr title="Unabbreviated">abbreviation</abbr> tristique <b>bold text</b> et netus et <strong>strong text</strong> ac turpis egestas. <em>emphasised text</em> quam. Wuhoh, here's an <acronym title="ACRONYM">acronym</acronym>, ultricies eget, tempor sit amet, ante. <i>italic text</i> sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.</p>
+            <hr />
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+            <h2>Blockquote (this is a h2)</h2>
+            <blockquote>
+                <p>&ldquo;No, Mr. Bond. I expect you to die&rdquo;</p>
+            </blockquote>
+            <h3>Button (this is a h3)</h3>
+            <p>Here&rsquo;s <button>a button</button></p>
+            <h4>Unordered list (this is a h4)</h4>
+            <ul>
+               <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+               <li>Aliquam tincidunt mauris eu risus.</li>
+               <li>Vestibulum auctor dapibus neque.</li>
+               <li>Morbi in <code>some code</code> sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.</li>
+               <li>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.</li>
+               <li>Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.</li>
+               <li>Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</li>
+            </ul>
+            <p><cite>A citation.</cite></p>
+            <h5>Ordered list (this is a h5)</h5>
+            <ol>
+               <li>Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.</li>
+               <li>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.</li>
+               <li>Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.</li>
+               <li>Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</li>
+            </ol>
+            <h6>Definition list (this is a h6)</h6>
+            <dl>
+                <dt>Defining</dt>
+                <dd>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</dd>
+                
+                <dt>Various</dt>
+                <dd>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</dd>
+                
+                <dt>Things</dt>
+                <dd>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</dd>
+            </dl>
+            <h2>Form</h2>
+            <form action="" method="">
+                <fieldset>
+                    <legend>Fieldset &amp; legend</legend>
+                    <p><label for="text">Text input</label> <input type="text" name="text" id="text" value="Default value"></p>
+                    <p><label for="text">Text input with placeholder</label> <input type="text" name="text2" id="text2" placeholder="Placeholder value"></p>
+                    <p><label for="select">Select</label> <select id="select"><option value="1">Option 1</option><option value="2">Option 2</option><option value="3">Option 3</option></select>
+                </fieldset>
+            </form>
+        </section><!-- end #test-content -->
     </div><!-- end #main -->
     
     <aside id="sidebar">
         <h3>Hi from the sidebar!</h3>
-        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, <a href="#">tempor sit amet</a>, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
     </aside><!-- end #sidebar -->
     
     <footer>
-        
+        <nav>
+            <ul>
+                <li><a href="#">Testing</a></li>
+                <li><a href="#">Footer</a></li>
+                <li><a href="#">Unordered</a></li>
+                <li><a href="#">List</a></li>
+            </ul>
+        </nav>
+        <p>BaCSS is a project by <a href="http://sambowler.com">Sam Bowler</a>. You can find the source on <a href="http://github.com/sambowler/bacss">Github</a>. I'd love to hear any and all feedback you have &mdash; catch me on <a href="http://twitter.com/aninnovativeweb">Twitter</a>.</p>
     </footer>
 </body>
 </html>
