@@ -73,13 +73,13 @@ b, strong, th { font-weight: bold; }
 
 i, em { font-style: italic; }
 
-a { color: #000; text-decoration: none; }
+a { color: #000; }
 
 a:hover, a:active {
 	background: #000;
 	color: #FFF;
 	outline: none;
-	text-decoration: underline;
+	text-decoration: none;
 }
 
 /*  j.mp/webkit-tap-highlight-color */
@@ -92,12 +92,6 @@ sub { vertical-align: sub; font-size: smaller; }
 sup { vertical-align: super; font-size: smaller; }
 
 p { margin-bottom: 0.8em; color: #444; }
-
-.error, .success { padding: 0.25em 0.5em; font-weight: bold; }
-
-.error { background: #FFEEEE; border: 1px solid #C98F8F; }
-
-.success { background: #EEFFEE; border: 1px solid #8FC98F; }
 
 cite { font-weight: normal; color: #666; font-style: normal; font-size: 13px; }
 
@@ -162,7 +156,15 @@ dd {
 	font-size: 13px;
 }
 
-abbr { cursor: help; border-bottom: 1px dotted #999; }
+abbr, acronym { cursor: help; border-bottom: 1px dotted #999; }
+
+/* http://forrst.com/posts/Gradient_Horizontal_Rules-yZ4 */
+hr { 
+	border: 0; 
+	height: 1px;
+	background: -webkit-gradient(linear, left top, right top, color-stop(0, rgb(255,255,255)), color-stop(0.25, rgb(187, 187, 187)), color-stop(0.75, rgb(187, 187, 187)), color-stop(1, rgb(255,255,255)));
+	background: -moz-linear-gradient(left center, rgb(255,255,255) 0%, rgb(187, 187, 187) 25%, rgb(187, 187, 187) 75%, rgb(255,255,255) 100%);
+}
 
 form {
 	padding: 10px;
@@ -231,16 +233,16 @@ header, #header {
 	width: 100%;
 }
 
-header * { color: #FFF !important; }
+header *, #header * { color: #FFF !important; }
 
-header ul, #header ul {
+header ul, #header ul, footer ul, #footer ul {
 	list-style-type: none;
 	padding: 0;
 	margin: 0;
 	overflow: hidden;
 }
 
-header ul li, #header ul li {
+header ul li, #header ul li, footer ul li, #footer ul li {
 	float: left;
 }
 
@@ -271,4 +273,28 @@ body > aside *:first-child, #sidebar *:first-child, #secondary-content *:first-c
 footer, #footer {
 	clear: both;
 	width: 98.75%;
+	margin: 1.5em -0.625em 0; 
+	padding: 0 1em 1em;
+	background: #0B0A0E; 
+	color: #FFF;
+	width: 100%;
 }
+
+footer *, #footer * { color: #FFF !important; }
+
+footer ul, #footer ul { margin-bottom: 0.8em; }
+
+/* Default Classes */
+.error, .success { padding: 0.25em 0.5em; font-weight: bold; }
+
+.error { background: #FFEEEE; border: 1px solid #C98F8F; }
+
+.success { background: #EEFFEE; border: 1px solid #8FC98F; }
+
+.left { float: left; }
+
+.right { float: right; }
+
+.clear { clear: both; }
+
+.clearfix { overflow: hidden; zoom: 1; }
