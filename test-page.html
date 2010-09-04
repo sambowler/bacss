@@ -8,8 +8,8 @@
     <script>
         $(function() {
             $('#how-to-use-it').hide();
-            $('#show-test-content').click(function() { $('#test-content').slideToggle(); return false; });
             $('#show-how-to-use-it').click(function() { $('#how-to-use-it').slideToggle(); return false; });
+            $('#show-test-content').click(function() { $('#test-content').slideToggle(); return false; });
         });
     </script>
 </head>
@@ -51,6 +51,7 @@ new Bacss({
         <h2><a id="show-test-content" href="#test-content">Take A Look At It In Action &rarr;</a></h2>
         <section id="test-content">
             <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+            
             <h1>Inline elements (this is a h1)</h1>
             <p>Pellentesque <abbr title="Unabbreviated">abbreviation</abbr> tristique <b>bold text</b> et netus et <strong>strong text</strong> ac turpis egestas. <em>emphasised text</em> quam. Wuhoh, here's an <acronym title="ACRONYM">acronym</acronym>, ultricies eget, tempor sit amet, ante. <i>italic text</i> sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.</p>
             <hr />
@@ -59,8 +60,10 @@ new Bacss({
             <blockquote>
                 <p>&ldquo;No, Mr. Bond. I expect you to die&rdquo;</p>
             </blockquote>
+            
             <h3>Button (this is a h3)</h3>
-            <p>Here&rsquo;s <button>a button</button></p>
+            <p>Here&rsquo;s <button>a button</button>.</p>
+            
             <h4>Unordered list (this is a h4)</h4>
             <ul>
                <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
@@ -72,6 +75,7 @@ new Bacss({
                <li>Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</li>
             </ul>
             <p><cite>A citation.</cite></p>
+            
             <h5>Ordered list (this is a h5)</h5>
             <ol>
                <li>Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.</li>
@@ -79,6 +83,7 @@ new Bacss({
                <li>Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.</li>
                <li>Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</li>
             </ol>
+            
             <h6>Definition list (this is a h6)</h6>
             <dl>
                 <dt>Defining</dt>
@@ -90,15 +95,25 @@ new Bacss({
                 <dt>Things</dt>
                 <dd>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</dd>
             </dl>
+            
             <h2>Form</h2>
             <form action="" method="">
                 <fieldset>
                     <legend>Fieldset &amp; legend</legend>
                     <p><label for="text">Text input</label> <input type="text" name="text" id="text" value="Default value"></p>
-                    <p><label for="text">Text input with placeholder</label> <input type="text" name="text2" id="text2" placeholder="Placeholder value"></p>
-                    <p><label for="select">Select</label> <select id="select"><option value="1">Option 1</option><option value="2">Option 2</option><option value="3">Option 3</option></select>
+                    <p><label for="text2">Text input with placeholder</label> <input type="text" name="text2" id="text2" placeholder="Placeholder value"></p>
+                    <p><label for="select">Select</label> <select id="select"><option value="1">Option 1</option><option value="2">Option 2</option><option value="3">Option 3</option></select></p>
+                    <p><label for="select2">Multiple select</label> <select id="select2" size="3"><option value="1">Option 1</option><option value="2">Option 2</option><option value="3">Option 3</option></select></p>
                 </fieldset>
             </form>
+            
+            <h2>Images</h2>
+            <a href="http://www.flickr.com/photos/yjv/4952742057/in/pool-26241990@N00/#"><img src="images/le_valais_by_yago1com.jpg" alt="Le Valais - By yago1.com on Flickr" /></a>
+            <p><cite><a href="http://www.flickr.com/photos/yjv/4952742057/in/pool-26241990@N00/#">Le Valais by yago1.com on Flickr</a></cite></p>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+            <img class="right" src="images/swiss_alps_by_yago1com.jpg" alt="Swiss Alps - By yago1.com on Flickr" />
+            <p><cite><a href="http://www.flickr.com/photos/yjv/4952169992/in/pool-26241990@N00/">Swiss Alps by yago1.com on Flickr.</a></cite></p>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
         </section><!-- end #test-content -->
     </div><!-- end #main -->
     
