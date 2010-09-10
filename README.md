@@ -30,7 +30,8 @@ There's the JavaScript solution:
     
 Simply pass the object a set of options that you would like to be replaced in the CSS. You could, of course, just adjust the CSS to your needs but this may be easier for some users.
 
-## Todo
+## To-do
 
+- IE support
 - Different layouts (2 column, 3 columns etc.)
 - Responsive
