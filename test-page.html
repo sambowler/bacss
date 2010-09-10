@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>BaCSS</title>
-    <link rel="stylesheet" href="bacss-0.1.css">
+    <script src="bacss-0.1.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
     <script>
+        new Bacss();
+    
         $(function() {
             $('#how-to-use-it, #test-content').hide();
             $('#show-how-to-use-it').click(function() { $('#how-to-use-it').slideToggle(); return false; });

@@ -36,7 +36,7 @@ time, mark, audio, video {
 }
 
 /* Base Elements */
- 
+
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section { display: block; }
  
@@ -217,10 +217,11 @@ textarea {
 label, input[type=button], input[type=submit], button { cursor: pointer; }
  
 input:invalid {
+	border-radius: 1px;
 	-moz-box-shadow: 0px 0px 5px red;
 	-webkit-box-shadow: 0px 0px 5px red;
-	border-radius: 1px;
-	box-shadow: 0px 0px 5px red; }
+	box-shadow: 0px 0px 5px red; 
+}
 
 /* Tables */
 table {
