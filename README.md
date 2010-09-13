@@ -10,6 +10,8 @@ Simply include the JS. It'll grab the latest CSS for you and include [ie7-js](ht
 
     <script type="text/javascript" src="bacss-0.1.js"></script>
 
+    <link rel="stylesheet" href="http://github.com/sambowler/bacss/raw/master/latest.css" media="screen">
+
 [latest.css](http://github.com/sambowler/bacss/raw/master/latest.css) is all nicely laid out and legible to make it easy to customise to your needs. 
 
 **If you're using HTML5 elements, you will still need to include the [HTML5 Shiv](http://code.google.com/p/html5shiv/) or [Modernizr](http://modernizr.com) yourself.**
