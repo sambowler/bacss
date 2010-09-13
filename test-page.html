@@ -5,14 +5,16 @@
     <title>BaCSS &middot; A Base Stylesheet For Your Project</title>
     
     <!-- All you need to use BaCSS in your project is the following line -->
-    <script src="http://github.com/sambowler/bacss/raw/master/bacss-0.1.js"></script>
+    <script src="bacss-0.1.js"></script>
     <!-- -->
     
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
     <script>
         $(function() {
-            $('#how-to-use-it, #test-content').hide();
-            $('#show-how-to-use-it').click(function() { $('#how-to-use-it').slideToggle(); return false; });
+            $('#test-content').hide();
             $('#show-test-content').click(function() { $('#test-content').slideToggle(); return false; });
         });
     </script>
@@ -33,25 +35,15 @@
     
     <div id="main">
         <h2>Huh, what?!</h2>
-            <p>BaCSS (pronounced &ldquo;base&rdquo;) is a stylesheet that is just that, a base set of styling for anything you&rsquo;re building. It will add basic styling, spacing and layout to every possible element you could imagine. Why? You may ask. Because nobody wants to show clients default browser styling.</p>
-        <h2><a id="show-how-to-use-it" href="#how-to-use-it">How To Use It &rarr;</a></h2>
-        <div id="how-to-use-it">
-            <h3>If you're normal</h3>
-            <p>If you&rsquo;re using traditional ID's for your layout such as <code>#header</code>, <code>#main</code>, <code>#sidebar</code>, <code>#footer</code> or you're using HTML5's new semantic elements, this is probably the solution for you. Simply include the stylesheet as you would any other.</p>
-            <pre>&lt;link rel=&quot;stylesheet&quot; href=&quot;bacss-0.1.css&quot; media=&quot;screen&quot; type=&quot;text/css&quot;&gt;</pre>
-            <p>No need for <code>type="text/css"</code> in HTML5, of course.</p>
-            
-            <h3>If You&rsquo;re A Little Barbaric (Use Different ID's)</h3>
-            <p>There's the JavaScript solution:</p>
-            <pre>&lt;script type=&quot;text/javascript&quot; src=&quot;bacss-0.1.js&quot;&gt;&lt;/script&gt;
-&lt;script type=&quot;text/javascript&quot;&gt;
-new Bacss({
-    '#header', '#new-header-id',
-    '#footer', '#new-footer-id',
-});
-&lt;/script&gt;</pre>
-            <p>Simply pass the object a set of options that you would like to be replaced in the CSS. You could, of course, just adjust the CSS to your needs but this may be easier for some users.</p>
-        </div><!-- end #how-to-use-it -->
+        <p>BaCSS (pronounced &ldquo;base&rdquo;) is a stylesheet that is just that, a base set of styling for anything you&rsquo;re building. It will add basic styling, spacing and layout to every possible element you could imagine. &ldquo;Why?&rdquo; You may ask. Because nobody wants to show clients default browser styling.</p>
+        
+        <h2>Jus' like 'at</h2>
+        <h3>If you need IE support</h3>
+        <p>You can include the JavaScript version of BaCSS. This will pull in the latest CSS as well as <a href="http://code.google.com/p/ie7-js/">ie7-js</a> which is required for CSS3 selector support.</p>
+        <pre>&lt;script src=&quot;http://github.com/sambowler/bacss/raw/master/latest.js&quot;&gt;&lt;/script&gt;</pre>
+        <h3>If IE support is no biggy</h3>
+        <p>Just include the CSS or download to customise to your needs (you can <a href="m&#97;ilto:&#115;&#97;&#109;&#64;&#115;&#97;&#109;&#98;&#111;&#119;&#108;&#101;&#114;&#46;&#99;&#111;&#109">drop me an email</a> if there's something that you feel should be included and other people would benefit from).</p>
+        <pre>&lt;link rel=&quot;stylesheet&quot; href=&quot;http://github.com/sambowler/bacss/raw/master/latest.css&quot; media=&quot;screen&quot;&gt;</pre>
         
         <h2><a id="show-test-content" href="#test-content">Take A Look At It In Action &rarr;</a></h2>
         <section id="test-content">
@@ -177,7 +169,7 @@ new Bacss({
                 <li><a href="#">Links</a></li>
             </ul>
         </nav>
-        <p>BaCSS is a project by <a href="http://sambowler.com">Sam Bowler</a>. You can find the source on <a href="http://github.com/sambowler/bacss">Github</a>. I'd love to hear any and all feedback you have &mdash; catch me on <a href="http://twitter.com/aninnovativeweb">Twitter</a>.</p>
+        <p>BaCSS is a project by <a href="http://sambowler.com">Sam Bowler</a>. You can find the source on <a href="http://github.com/sambowler/bacss">Github</a>. I'd love to hear any and all feedback you have&mdash;catch me on <a href="http://twitter.com/aninnovativeweb">Twitter</a>.</p>
     </footer>
 </body>
 </html>
