@@ -8,7 +8,7 @@ BaCSS is a stylesheet that is just that, a base set of styling for anything you'
 
 Simply include the JS. It'll grab the latest CSS for you and include [ie7-js](http://code.google.com/p/ie7-js/) which is required for advanced selector support in IE. **If you don't need IE for your project, feel free to use the pure CSS.**
 
-    <script type="text/javascript" src="http://github.com/sambowler/bacss/raw/master/latest.js"></script>
+    <script src="http://github.com/sambowler/bacss/raw/master/latest.js"></script>
 
     <link rel="stylesheet" href="http://github.com/sambowler/bacss/raw/master/latest.css" media="screen">
 
