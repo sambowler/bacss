@@ -1,39 +1,26 @@
-function createStyleEl() {
-	var head =  document.getElementsByTagName('head');
-	head = head[0];
-	var cssEl = document.createElement('link');
-	cssEl.rel = "stylesheet";
-	cssEl.href = "http://github.com/sambowler/bacss/raw/master/latest.css"
-	cssEl.media = "screen";
-	head.appendChild(cssEl);
+// Creates a link element to the latest version of BaCSS
+function createLinkEl() {
+	head =  document.getElementsByTagName('head')[0];
+	cssEl = document.createElement('link');
+	linkEl.rel = "stylesheet";
+	linkEl.href = "http://github.com/sambowler/bacss/raw/master/latest.css";
+	linkEl.media = "screen";
+	head.appendChild(linkEl);
+}
+
+// Checks whether the user is using IE < 9
+function is_lt_ie9() {
+	if(parseFloat(navigator.userAgent.match(/MSIE (\d+\.\d+);/)[1]) < 9) { return true; } else { return false; };
 }
 
 function Bacss(options) {
-	var head = document.getElementsByTagName('head');
-	head = head[0];
-	var ie7js = document.createElement('script');
-	ie7js.src = "http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js";
-	head.appendChild(ie7js);
-	var html5shiv = document.createElement('script');
-	html5shiv.src = "http://html5shiv.googlecode.com/svn/trunk/html5.js";
-	head.appendChild(html5shiv);
-	if(options) {
-		for (var key in options) {
-			var val = options[key];
-			split = bacss.split(key)
-			bacss = split[0] + val + split[1];
-		}
-		createStyleEl();
-	} else {
-		createStyleEl();
+	if(is_lt_ie9()) { // If the user is using less than IE9, we need to get the browser to support some features the CSS uses (and support HTML5 elements)
+		head = document.getElementsByTagName('head')[0];
+		ie7js = document.createElement('script');
+		ie7js.src = "http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js";
+		head.appendChild(ie7js);
 	}
+	createLinkEl();
 };
 
-scripts = document.getElementsByTagName('script');
-for(var i = 0; i < scripts.length; i++) {
-	var src = scripts[i].src;
-	if(src.match(/bacss/)) {
-		src = src.split('?');
-		src[1] == "autorun" ? new Bacss() : false;
-	}
-}
+new Bacss();
