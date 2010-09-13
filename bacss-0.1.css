@@ -36,7 +36,6 @@ time, mark, audio, video {
 }
 
 /* Base Elements */
-
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section { display: block; }
  
@@ -118,6 +117,13 @@ dl {
 	padding: 10px; 
 }
 
+dt { font-weight: bold; }
+ 
+dd {
+	font-size: 13px;
+	margin-bottom: 1em; 
+}
+
 /* http://forrst.com/posts/Gradient_Horizontal_Rules-yZ4 */
 hr {
 	background: #DDD;
@@ -167,14 +173,7 @@ pre, code, kbd, samp, tt, var { font: 12px "Monaco", "Inconsolata", "Courier New
  
 code, kbd, samp, tt, var { background: rgba(0, 0, 0, 0.15); }
  
-dt { font-weight: bold; }
- 
-dd {
-	font-size: 13px;
-	margin-bottom: 1em; 
-}
- 
-abbr, acronym {
+abbr, time {
 	border-bottom: 1px dotted #999;
 	cursor: help; 
 }
@@ -274,9 +273,9 @@ body > header ul, #header ul, body > footer ul, #footer ul {
 	padding: 0; 
 }
  
-body > header ul li, #header ul li, body > footer ul li, #footer ul li { float: left; }
+body > header li, #header li, body > footer li, #footer li { float: left; }
  
-header > nav li a, body > header li a, #header li a {
+body > header li a, #header li a, body > footer li a, #footer li a {
 	background: #333;
 	color: #FFF;
 	display: block;
