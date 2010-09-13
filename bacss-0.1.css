@@ -257,7 +257,7 @@ body > * {
 	margin: 0 0.625%; 
 }
  
-header, #header {
+header, body > #header {
 	background: #0B0A0E;
 	color: #FFF;
 	margin: 0 -0.625em 1.5em;
@@ -265,18 +265,18 @@ header, #header {
 	width: 100%; 
 }
  
-header *, #header * { color: #FFF !important; }
+header *, body > #header * { color: #FFF !important; }
  
-header ul, #header ul, footer ul, #footer ul {
+body > header ul, #header ul, body > footer ul, #footer ul {
 	list-style-type: none;
 	margin: 0;
 	overflow: hidden;
 	padding: 0; 
 }
  
-header ul li, #header ul li, footer ul li, #footer ul li { float: left; }
+body > header ul li, #header ul li, body > footer ul li, #footer ul li { float: left; }
  
-nav li a, header li a, #header li a {
+header > nav li a, body > header li a, #header li a {
 	background: #333;
 	color: #FFF;
 	display: block;
@@ -285,7 +285,7 @@ nav li a, header li a, #header li a {
 	text-decoration: none; 
 }
  
-nav li a:hover, header li a:hover, #header li a:hover { background: #444; }
+header > nav li a:hover, body > header li a:hover, #header li a:hover { background: #444; }
  
 body > section, body > article, #main, #primary-content {
 	float: left;
