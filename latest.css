@@ -284,7 +284,7 @@ body > header li a, #header li a, body > footer li a, #footer li a {
 	text-decoration: none; 
 }
  
-header > nav li a:hover, body > header li a:hover, #header li a:hover { background: #444; }
+body > header li a:hover, #header li a:hover, body > footer li a:hover, #footer li a:hover { background: #444; }
  
 body > section, body > article, #main, #primary-content {
 	float: left;
@@ -318,7 +318,7 @@ footer, #footer {
  
 footer *, #footer * { color: #FFF !important; }
  
-footer ul, #footer ul { margin-bottom: 0.8em; }
+body > footer ul, #footer ul { margin-bottom: 0.8em; }
  
 /* Default Classes */
 .error, .success {
