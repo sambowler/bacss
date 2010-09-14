@@ -318,7 +318,7 @@ footer, #footer {
  
 footer *, #footer * { color: #FFF !important; }
  
-body > footer ul, #footer ul { margin-bottom: 0.8em; }
+body > footer ul, #footer ul { margin-bottom: 0.8em !important; }
  
 /* Default Classes */
 .error, .success {
