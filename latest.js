@@ -15,7 +15,7 @@ function is_lt_ie9() {
 	if(ie_v && ie_v[1] < 9) { return true; } else { return false; };
 }
 
-function Bacss() {
+(function Bacss() {
 	if(is_lt_ie9()) { // If the user is using less than IE9, we need to get the browser to support some features the CSS uses (and support HTML5 elements)
 		head = document.getElementsByTagName('head');
 		head = head[0];
@@ -24,6 +24,4 @@ function Bacss() {
 		head.appendChild(ie7js);
 	}
 	createLinkEl();
-};
-
-new Bacss();
+})();
