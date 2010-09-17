@@ -250,7 +250,7 @@ th {
 }
 
 /* Layout - wildcard's are hardly the most efficient way of doing things but we don't really have much choice */
-body > * {
+body > *:not(script), body > *:not(style) {
 	display: block;
 	float: left;
 	margin: 0 0.625%; 
