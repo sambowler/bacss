@@ -250,21 +250,23 @@ th {
 }
 
 /* Layout - wildcard's are hardly the most efficient way of doing things but we don't really have much choice */
-body > *:not(script), body > *:not(style) {
+body > * {
 	display: block;
 	float: left;
 	margin: 0 0.625%; 
 }
+
+script, style { display: none; }
  
-header, body > #header {
+body > header, body #header {
 	background: #0B0A0E;
 	color: #FFF;
-	margin: 0 -0.625em 1.5em;
+	margin: 0 -0.625em 1.5em !important;
 	padding: 2em 1em 0;
 	width: 100%; 
 }
  
-header *, body > #header * { color: #FFF !important; }
+body > header *, #header * { color: #FFF !important; }
  
 body > header ul, #header ul, body > footer ul, #footer ul {
 	list-style-type: none;
